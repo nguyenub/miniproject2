@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang = eng>
+    <head>
+        <title>Analysis of Robinhood User Holdings During January - August 2020</title>
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/milligram/1.3.0/milligram.css">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body style="background-color: lemonchiffon;">
+        <div class="w3-row w3-padding-64" id="about">
+            <div class="container">
+                <h1 style="text-align: center"> <u><b>Analysis of Robinhood User Holdings During January - August 2020</u></b></h1>
+            </div>
+        </div> 
+        <div class="w3-content" style="max-width:1100px">
+            <div class="w3-row" id="about">
+                <h2><u>Introduction:</u></h2>
+                <p class="w3-hide-small">
+                    For this data analysis, we chose the Robinhood Users dataset that contains the number of users holding S&P500 stocks through Robinhood for everyday and every hour. 
+                    We filtered the data to get the number of users for the last day of the month for the months of January to August of 2020 to see how the COVID-19 pandemic affected the number of Robinhood Users holding stocks. 
+                    We hypothesized that the number of Robinhood holders would increase as the months go by because of the worsening situation with the pandemic.
+                    We analyzed data on number of Robinhood users holding stocks, month, number of COVID-19 cases, unemployment rate, S&P500 users, and S&P500 users by industry to answer the following questions:
+                </p>
+                <p class="w3-hide-small">
+                        Topic One: COVID-19 Cases
+                </p>
+                <p class="w3-hide-small">
+                        <span> 1. How many new COVID-19 cases are there each month in the US?</span>
+                </p>
+                <p class="w3-hide-small">
+                        <span> 2. What is the distribution of COVID-19 cases in the US?</span>
+                </p>
+                <p class="w3-hide-small">
+                    <span> 3. What is the relationship between the number of Robinhood Users holding stocks Vs the number of COVID-19 cases in the US?</span>
+                </p>
+                <p class="w3-hide-small">
+                        Topic Two: Unemployment Rate
+                </p>
+                <p class="w3-hide-small">
+                        <span> 1. What is the relationship between # of Robinhood Users for Top S&P500 Stocks vs. Unemployment rate?</span>
+                </p>
+                <p class="w3-hide-small">
+                        Topic Three: S&P 500
+                </p>
+                <p class="w3-hide-small">
+                        <span> 1. What is the distribution of Robinhood users holding S&P500 stocks per month?</span>
+                </p>
+                <p class="w3-hide-small">
+                        <span> 2. What is the relationship between number of Robinhood users holding stocks Vs S&P500?</span>
+                </p>
+                <p class="w3-hide-small">
+                        Topic Four: Top 5 Stock Companies By Industry
+                </p>
+                <p class="w3-hide-small">
+                        <span> 1. What is the total number of Robinhood users for top S&P500 stocks by industry per month?</span>
+                </p>
+                <p class="links">
+                    Here is the link to the Robinhood dataset:
+                    <a href="https://robintrack.net/?fbclid=IwAR2_Z2NVJSTKU4_Wxd1m9z2sYUj2sUaBN0D2M63wb7jwj7vXLL4qgXeJGl8"> <u>Link to the data source. </u></a>
+                    <br>
+                    Here is a link to the COVID-19 dataset:
+                    <a href="https://covidtracking.com/data"> <u> to the data source. </u></a>
+                    <br>
+                    Here is a link to the S&P 500 dataset:
+                    <a href="https://www.marketwatch.com/investing/index/spx"> <u>Link to the data source. </u> </a>
+                </p>
+                <h2><u>Detail:</u></h2>
+                <h2 class="w3-hide-small" style="text-align: center">
+                        Topic One: COVID-19 Cases
+                </h2>
+                <div class='tableauPlaceholder' id='viz1602285587442' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dashboard_16022855757640&#47;Dashboard12&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='dashboard_16022855757640&#47;Dashboard12' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;da&#47;dashboard_16022855757640&#47;Dashboard12&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602285587442');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='1027px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <div class='tableauPlaceholder' id='viz1602286062331' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;covidcases_16022860491630&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='covidcases_16022860491630&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;co&#47;covidcases_16022860491630&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602286062331');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+                <h2 class="w3-hide-small w3-padding-64" style="text-align: center">
+                        Topic Two: Unemployment Rate
+                </h2>
+                <div class='tableauPlaceholder' id='viz1602293117856' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VizLab4_16022931051350&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='VizLab4_16022931051350&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Vi&#47;VizLab4_16022931051350&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602293117856');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1050px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1050px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                
+                <h2 class="w3-hide-small w3-padding-64" style="text-align: center">
+                        Topic Three: S&P 500
+                </h2>
+                <div class='tableauPlaceholder' id='viz1602289189756' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Nu&#47;NumberofRobinHoodUsersBar_16022891325490&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NumberofRobinHoodUsersBar_16022891325490&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Nu&#47;NumberofRobinHoodUsersBar_16022891325490&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602289189756');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <div class='tableauPlaceholder' id='viz1602289641202' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Nu&#47;NumberofRobinHoodUsers2020vs_SP_16022896267830&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='NumberofRobinHoodUsers2020vs_SP_16022896267830&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Nu&#47;NumberofRobinHoodUsers2020vs_SP_16022896267830&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602289641202');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+                <h2 class="w3-hide-small w3-padding-64" style="text-align: center">
+                        Topic Four: Top 5 Stock Companies By Industry
+                </h2>
+                <div class='tableauPlaceholder' id='viz1602287419427' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ro&#47;RobinTrackTop5Industry_16022874102650&#47;Dashboard1&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='RobinTrackTop5Industry_16022874102650&#47;Dashboard1' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ro&#47;RobinTrackTop5Industry_16022874102650&#47;Dashboard1&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1602287419427');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='1150px';vizElement.style.width='100%';vizElement.style.minHeight='587px';vizElement.style.maxHeight='787px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+            
+            </div>
+            <br>
+            <hr>
+            <h2><u>Reflection:</u></h2>
+            <p class="w3-hide-small">
+                    
+                    </p><p class="w3-hide-small"> 
+                            <i>Data selection:</i> 
+                            <br>
+                            We chose the Robinhood Users dataset as our main basis of our project because we wanted to see effect the Coronavirus pandemic had on the number of people holding Robinhood stocks. 
+                            The pandemic had an effect on many aspects of society, such as unemployment. 
+                            Therefore, we wanted to see how the pandemic played a role in the increase of Robinhood stock users which is why we analyzed the number of users during the months of January to August of 2020 which is when the pandemic really began to start affecting our everyday lives. 
+                            We filtered the dataset to only get the number of users at the end of the month at 5pm starting January 2020 which is around the time when the virus began spreading within the United States. 
+                    </p>
+                    <img src="data.png">
+                    <p class="w3-hide-small"> 
+                        <br>
+                        <br>
+                        <i>Processing: </i>
+                        <br>
+                        We filtered the dataset to only get the number of users at the end of the month at 5pm starting with January 2020 which is around the time when the virus began spreading within the United States. 
+                        Also, because the dataset contained hundreds of stocks, we only chose the top 5 S&P500 to analyze. 
+                        We then had to find separate datasets in which we used to analyze the affect each variable had on the number of Robinhood users holding stocks such as the number of COVID-19 cases and unemployment. 
+
+                </p>
+                <img src="case.png">
+                    <p class="w3-hide-small">
+                                    <br>
+                                    <br>
+                            <i>Exploration: </i>
+                            <br>
+                            We explored the 4 Aspects of the data as listed above: COVID-19 Cases, Unemployment Rate, S&P500, and Numbers of holders for top S&P500 by industry.
+                            We first created 12 worksheets with bar graphs, line graphs, maps, and so on. And while the first 2 aspects analyzed the effect they had on Robinhood users, the last 2 aspects explored how the increase in Robinhood users during this time period affected more specific aspects of the stock market. 
+                            <br>
+                            <br>
+                            When choosing out graphs to decide which best answered our questions, we based it on what we were trying to take away from the data - whether it be a relationship, a trend, or just representing data in a beautiful way. 
+                    </p>
+                    <img src="process.png">
+                    
+                    <p class="w3-hide-small">
+                            <br>
+                            <br>
+                            For example, when trying to determine the number of Robinhood users in 2020 to answer the question of "What is the distribution of Robinhood users holding S&P500 stocks per month?", we created a bar graph, line graph, scatterplot, and ___. 
+                            However in the end we chose a bargraph because we wanted to just clearly show the number of holders. We only wanted to visually display the data and not analyze anything with it. 
+                            Through a bar graph, we were able to show how many users held a specific stock during each month clearly and concisely.
+                             
+                    </p>
+                    <img src="exploration.png">
+                    
+                    <p class="w3-hide-small">
+                            <br>
+                            <br>
+                                <i>Explanation: </i>
+                                <br>
+                                We created 6 different dashboards to answer our questions for our 4 topics. 
+                                <br>
+                                <br>
+                            For the first topic on COVID-19 cases, we created a dashboard with a bar chart and map to show the the Number of new COVID-19 cases every month between January to August of 2020 and the population distribution of cases for each state in the US. 
+                            The bar chart is good for comparing the number of new cases each month as the points are independent. 
+                            The map displays the total number of COVID-19 cases separated by state. 
+                            We can see that certain states have a higher number of COVID-19 cases than others that is differentiated visually through the hue. 
+                            This dashboard is only supposed to inform on the COVID-19 situation in the US.
+                            Therefore, we then created a second dashboard with a line graph that displays the total number of Robinhood users for each of the top S&P500 stocks for each month and the total number of COVID-19 cases to see the correlation between the number of users and number of COVID-19 cases. 
+                            With the data from the first dashboard, to help viewers see the bad situation of the pandemic as a visual, we could then be able to use that data and analyze its effect on the number of Robinhood users holding as a line graph that shows us trends between lines.
+                                    
+                    </p>
+                    <img src="covid.png">
+                    <p class="w3-hide-small">
+                            <br>
+                            <br>  
+                            For the second topic, we are looking to explore the correlation between Unemployment rate and # of Robinhood Users. 
+                            The unemployment rate data is from US Labor Beaureau Statistics. 
+                            We hypothesized that as unemployment rate goes down, the # of users would go up. 
+                            Even though it is such a trend after April, we can argue that these two curves do not correlate with each other because the # of Robinhood users goes up since everyone has more time on hand to explore stock market and unemployment rate goes down because of governmental stimulus & economic recovery. 
+                            Therefore, we can conclude that these two curves do not correlate. 
+                            For the graph, x axis are the months from January to August; and the graph has dual y-axis which one is # of Robinhood users and the other one is unemployment rate %. 
+                            We chose a line graph because it best displays any trend within the data.      
+                    </p>
+                    <img src="unemployment.png">
+                    <p class="w3-hide-small">
+                            <br>
+                            <br>
+                            For the third topic, we looked at the datasets for S&P 500 and the number of Robinhood users holding stocks in the past 6 months. 
+                            We chose to create a line graph with dual axis to illustrate the trend between the data. 
+                            There are 5 lines representing Robinhood users holding the Top 5 Companies and the legend indicates what color represents which company. 
+                            We chose a line graph with dual axises to clearly show how the trends correlate with one another. 
+                            The data does not clearly show a direct correlation between the two but we can see that they both increase over time. 
+                            Especially after March, there is an increase of Robinhood users holding stocks. 
+                            We added another bar chart to show all the numbers throughout each month.
+                    </p>
+                    <img src="snp.png">
+                    <p class="w3-hide-small">
+                            <br>
+                            <br>
+                            For the fourth topic, we took a look at the correlation between the investments of Robinhood users and time. 
+                            We see that in 2020, Robinhood users increased their positions in industries such as Informational Technology, Communication Services, and Financials. 
+                            This is surprising given the fact that we were in a mini-recession due to the COVID-19 pandemic. 
+                            Rather than decreasing their positions and managing risk, Robinhood users or individual investors were able to increase their holding which demonstrates their ability to spot the low. 
+                            We see how in terms of industries, Robinhood users have a strong preference for these three industries which makes sense given that popular stocks such as FAANG and Tesla happen to fall under Information Technology, Communication Services, and Financials. 
+                            While other industries such as Utilities, Real Estate, and Materials are seen as unattractive.        
+                    </p>
+                    <img src="industry.png">
+            <p></p>
+            <p class="w3-hide-small">
+                    <span> <i>Findings:</i></span>
+                    <br>
+                    We found that the number of Robinhood users did increase from the months of July to August in 2020. 
+                    From our data, we can conclude that the pandemic did play a large role in the nummber of Robinhood users holding stocks as shown through our dashboards above. 
+            </p>
+            <p class="w3-hide-small">
+                    <span> <i>Lessions learned:</i></span>
+                    <br>
+                    Something we learned through this project is that data can be used to answer questions, however needs to be focused otherwise the idea will get too messy. 
+                    For this assignment we used multiple datasets on different topics that we combined to see the relationship between them. 
+                    However in doing this, we realized it was hard to get a single focus or we wondered if we were jumping around too much. Although the topics do connect with eachother in some type of way, if we did not explain our reasoning behind some of the topics, viewers would probably get confused on why that topic was included in the first place. 
+            </p>
+            <hr>
+    
+            
+        </div>
+    </body>
+</html>
